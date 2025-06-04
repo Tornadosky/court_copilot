@@ -3,6 +3,13 @@ Courtroom AI Assistant - Main Application
 Real-time transcription, context retrieval, and response generation for legal proceedings.
 """
 
+# Load environment variables from .env file first
+try:
+    from dotenv import load_dotenv
+    load_dotenv()  # This loads .env file automatically
+except ImportError:
+    pass  # python-dotenv not installed, will use system environment variables
+
 import asyncio
 import argparse
 import os
