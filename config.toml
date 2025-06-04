@@ -1,0 +1,33 @@
+[api]
+# OpenAI API settings - can be overridden by OPENAI_API_KEY environment variable
+openai_api_key = ""
+whisper_model = "whisper-1"
+chat_model = "gpt-4o-mini"
+embedding_model = "text-embedding-3-small"
+
+[audio]
+# Audio capture settings
+sample_rate = 16000
+channels = 1
+chunk_duration_seconds = 3.0
+silence_threshold_ms = 800
+device_index = -1  # -1 for default microphone
+
+[retrieval]
+# Document processing and retrieval settings
+chunk_size_tokens = 300
+chunk_overlap_tokens = 50
+max_retrieved_chunks = 5
+similarity_threshold = 0.7
+
+[response]
+# Response generation settings
+temperature = 0.2
+max_tokens = 160
+response_timeout_seconds = 4.0
+max_retries = 3
+
+[paths]
+# File paths
+docs_directory = "./docs"
+index_directory = "./index" 
